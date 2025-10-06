@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gyümölcs- és zöldség játék</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gyümölcs- és zöldség játék — interaktív gyakorló</h1>
+  </header>
+ 
+  <main class="container">
+    <!-- 1. Csoportosítás -->
+    <section class="card">
+      <div class="section-title">
+        <h2>1. Csoportosítás — húzd a gyümölcsöt a megfelelő kosárba!</h2>
+        <div class="small">Pont: <span id="score">0</span></div>
+      </div>
+      <p class="small">
+        Húzd a képeket a megfelelő csoportokba:
+        <strong>almatermésűek, csonthéjasok, héjas gyümölcsűek, bogyósgyümölcsök</strong>.
+      </p>
+ 
+      <div id="fruits" class="fruits-list"></div>
+ 
+      <div class="bins" id="bins">
+        <div class="bin" data-group="almatermesuek">
+          <h3>Almatermésűek</h3>
+          <div class="inside"></div>
+        </div>
+ 
+        <div class="bin" data-group="csonth-ejasok">
+          <h3>Csonthéjasok</h3>
+          <div class="inside"></div>
+        </div>
+ 
+        <div class="bin" data-group="hejas">
+          <h3>Héjas gyümölcsűek</h3>
+          <div class="inside"></div>
+        </div>
+ 
+        <div class="bin" data-group="bogyos">
+          <h3>Bogyósgyümölcsök</h3>
+          <div class="inside"></div>
+        </div>
+      </div>
+ 
+      <div class="controls">
+        <button id="checkBtn">Ellenőrzés</button>
+        <button class="secondary" id="resetBtn">Újrakezd</button>
+        <div class="small">Helyes: <span id="correctCount">0</span></div>
+      </div>
+    </section>
+    </main>
