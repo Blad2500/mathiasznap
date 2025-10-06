@@ -53,4 +53,39 @@
         <div class="small">Helyes: <span id="correctCount">0</span></div>
       </div>
     </section>
-    </main>
+
+    <!-- 2. Paradicsom kitöltős rész -->
+    <section class="card">
+      <div class="section-title">
+        <h2>2. Paradicsom — kitöltős rész</h2>
+      </div>
+      <p class="small">Válaszd ki az egyes mondatrészek helyes folytatását (lenyitható listák).</p>
+
+      <div id="fillForm" class="fill-form">
+        <div class="fill-row">A paradicsom növény <select data-key="q1"></select> származik.</div>
+        <div class="fill-row">Gyökérzete a talajba <select data-key="q2"></select> hatol és elágazik.</div>
+        <div class="fill-row">Levele az <select data-key="q3"></select> levelek közé tartozik, gyakran szőrözött.</div>
+        <div class="fill-row">A paradicsom <select data-key="q4"></select> éves lágyszárú növény.</div>
+        <div class="fill-row">A szár kezdetben <select data-key="q5"></select>, később bordázott.</div>
+        <div class="fill-row">A virágokra az 5-ös szám jellemző, a virágok színe <select data-key="q6"></select>.</div>
+        <div class="fill-row">Termése sokmagvú <select data-key="q7"></select>, színe <select data-key="q8"></select> vagy lehet <select data-key="q9"></select> is.</div>
+        <div class="fill-row">Fogyasztható nyersen és feldolgozva, készülhet belőle <select data-key="q10"></select>, <select data-key="q11"></select>.</div>
+        <div class="fill-row">A paradicsom kifejezetten <select data-key="q12"></select> igényes növény.</div>
+        <div class="fill-row">A <select data-key="q13"></select> igényes zöldségek közé tartozik.</div>
+        <div class="fill-row">A mélyre hatoló gyökérzete a <select data-key="q14"></select> jól hasznosítja.</div>
+        <div class="fill-row">Tápanyagigénye <select data-key="q15"></select>.</div>
+
+        <div class="controls">
+          <button id="fillCheck">Ellenőrzés</button>
+          <button class="secondary" id="fillReset">Újrakezd</button>
+        </div>
+
+        <div id="fillResult" class="result small"></div>
+      </div>
+    </section>
+
+  </main>
+ 
+
+  <script src="script.js" ></script>
+</body>
