@@ -1,8 +1,4 @@
-/* ===== Adat (fruits) =====
-   name: megjelenő név
-   emoji: egyszerű emoji (a képes feladat helyett) — később képekre cserélhető
-   group: a bin data-group értékével egyezik
-*/
+
 const fruits = [
   { name: 'alma', emoji: '🍎', group: 'almatermesuek' },
   { name: 'körte', emoji: '🍐', group: 'almatermesuek' },
@@ -24,14 +20,14 @@ const fruits = [
 
   { name: 'málna', emoji: '🫐', group: 'bogyos' },
   { name: 'szamóca', emoji: '🍓', group: 'bogyos' },
-  { name: 'szeder', emoji: '🫐', group: 'bogyos' },
-  { name: 'piros ribizli', emoji: '🫙', group: 'bogyos' },
-  { name: 'fekete ribizli', emoji: '🫙', group: 'bogyos' },
+  { name: 'szeder', emoji: '🍓', group: 'bogyos' },
+  { name: 'piros ribizli', emoji: '🍇', group: 'bogyos' },
+  { name: 'fekete ribizli', emoji: '🍇', group: 'bogyos' },
   { name: 'josta', emoji: '🫐', group: 'bogyos' },
   { name: 'egres', emoji: '🫐', group: 'bogyos' }
 ];
 
-/* ----- Drag & drop logika ----- */
+
 const fruitsContainer = document.getElementById('fruits');
 const bins = Array.from(document.querySelectorAll('.bin'));
 const scoreSpan = document.getElementById('score');
@@ -197,7 +193,7 @@ document.querySelectorAll('#fillForm select').forEach(sel => {
   });
 });
 
-// ellenőrzés
+
 document.getElementById('fillCheck').addEventListener('click', () => {
   let ok = 0, total = 0;
   document.querySelectorAll('#fillForm select').forEach(sel => {
@@ -247,7 +243,7 @@ document.getElementById('riddleCheck').addEventListener('click', () => {
   
   let message = `Helyes válaszok: ${correct}/${total} (${percentage}%)`;
   
-  // Motivációs üzenet az eredmény alapján
+
   if (correct === total) {
     message += " 🎉 Kitűnő! Mindent helyesen válaszoltál!";
   } else if (correct >= total * 0.8) {
@@ -272,13 +268,13 @@ document.getElementById('riddleReset').addEventListener('click', () => {
   document.getElementById('riddleResult').textContent = '';
 });
 
-// Automatikus ellenőrzés választáskor (opcionális)
+
 document.querySelectorAll('#riddleDropdowns select').forEach(select => {
   select.addEventListener('change', function() {
     // Eltávolítjuk az előző stílusokat
     this.classList.remove('correct', 'wrong');
     
-    // Ha van választva érték, ellenőrizzük
+
     if (this.value) {
       const correctAnswer = this.dataset.answer;
       if (this.value === correctAnswer) {
@@ -290,7 +286,7 @@ document.querySelectorAll('#riddleDropdowns select').forEach(select => {
   });
 });
 
-// Enter billentyű lenyomására is ellenőriz (opcionális)
+
 document.addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
     document.getElementById('riddleCheck').click();
