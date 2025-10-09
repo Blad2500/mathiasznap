@@ -84,22 +84,169 @@
       </div>
     </section>
 
-        <!-- 3. Találós kérdések -->
-    <section class="card">
-      <div class="section-title">
-        <h2>3. Találós kérdések</h2>
-      </div>
-      <p class="small">Írd be a megfejtést, majd nyomd meg az ellenőrzést.</p>
- 
-      <div id="riddles"></div>
- 
-      <div class="controls">
-        <button id="riddleCheck">Ellenőrzés</button>
-        <button class="secondary" id="riddleReset">Újrakezd</button>
-      </div>
- 
-      <div id="riddleResult" class="result small"></div>
-    </section>
+         <!-- 3. FELADAT -->
+<section class="card">
+  <h2>3. Találós kérdések — válaszd ki a helyes választ a legördülő menüből!</h2>
+  <div id="riddleDropdowns" class="fill-form">
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>1.</strong> Olyan, mint egy hosszú csónak, szeretik a majmok is, citromsárga, néha pöttyös, szívesen esszük mi is.</div>
+      <select data-answer="banán">
+        <option value="">— válassz —</option>
+        <option value="banán">banán</option>
+        <option value="alma">alma</option>
+        <option value="szőlő">szőlő</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>2.</strong> Szép kék, vagy sötét lila, lepotyog a fáról, lesz belőle finom lekvár, vagy gombóc a javából.</div>
+      <select data-answer="szilva">
+        <option value="">— válassz —</option>
+        <option value="szilva">szilva</option>
+        <option value="körte">körte</option>
+        <option value="meggy">meggy</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>3.</strong> Egy házban négyen laknak. Ahol se ajtó, se ablak, Fán van a ház amíg zöldek, Megbarnulva érnek földet.</div>
+      <select data-answer="dió">
+        <option value="">— válassz —</option>
+        <option value="dió">dió</option>
+        <option value="mandula">mandula</option>
+        <option value="barack">barack</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>4.</strong> Zöld színű, de mégsem zöldség, Több nevet adott neki a népség. Bogyós gyümölcs és savanyú, Virága, kellemetlen illatú.</div>
+      <select data-answer="egres">
+        <option value="">— válassz —</option>
+        <option value="egres">egres</option>
+        <option value="ribizli">ribizli</option>
+        <option value="málna">málna</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>5.</strong> Szép bordó és savanykás, süteménynek is pompás, a magját azt ne edd meg! Szárát fogd, ha leszeded!</div>
+      <select data-answer="meggy">
+        <option value="">— válassz —</option>
+        <option value="meggy">meggy</option>
+        <option value="cseresznye">cseresznye</option>
+        <option value="szilva">szilva</option>
+      </select>
+    </div>
+    
+      <div class="fill-row">
+      <div style="flex:1"><strong>6.</strong> Gránát, mégse robbanó, édes létől duzzadó vérvörös gyümölcs. Borából ne tölts!</div>
+      <select data-answer="gránátalma">
+        <option value="">— válassz —</option>
+        <option value="gránátalma">gránátalma</option>
+        <option value="narancs">narancs</option>
+        <option value="eper">eper</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>7.</strong> Zöldes héja illatos, fent karcsú, lent pocakos.</div>
+      <select data-answer="körte">
+        <option value="">— válassz —</option>
+        <option value="körte">körte</option>
+        <option value="alma">alma</option>
+        <option value="banán">banán</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>8.</strong> Kívül szúrós, belül fényes, sülve illatos, fenséges!</div>
+      <select data-answer="gesztenye">
+        <option value="">— válassz —</option>
+        <option value="gesztenye">gesztenye</option>
+        <option value="dió">dió</option>
+        <option value="tövis">tövis</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>9.</strong> Sok szemével mosolyog, kipréseled, kicsorog.</div>
+      <select data-answer="szőlő">
+        <option value="">— válassz —</option>
+        <option value="szőlő">szőlő</option>
+        <option value="meggy">meggy</option>
+        <option value="málna">málna</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>10.</strong> Faágon kemény, torokban puha. Megtörve finom ez a ………………</div>
+      <select data-answer="mandula">
+        <option value="">— válassz —</option>
+        <option value="mandula">mandula</option>
+        <option value="dió">dió</option>
+        <option value="mogyoró">mogyoró</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>11.</strong> Szereted vagy nem szereted, Ha megeszed, megkönnyezed.</div>
+      <select data-answer="hagyma">
+        <option value="">— válassz —</option>
+        <option value="hagyma">hagyma</option>
+        <option value="fokhagyma">fokhagyma</option>
+        <option value="torma">torma</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>12.</strong> Kis ember áll az erdőben, nagy kalap van a fejében. Ha kalapját megetted, őt magát is ismered.</div>
+      <select data-answer="gomba">
+        <option value="">— válassz —</option>
+        <option value="gomba">gomba</option>
+        <option value="hagyma">hagyma</option>
+        <option value="retek">retek</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>13.</strong> Zöld a szeme, de nem lát, Zöld rajta a nagykabát. Ha kifejted, megeheted, vagy fazékban megfőzheted.</div>
+      <select data-answer="zöldborsó">
+        <option value="">— válassz —</option>
+        <option value="zöldborsó">zöldborsó</option>
+        <option value="bab">bab</option>
+        <option value="lencse">lencse</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>14.</strong> Ha harapom, visszaharap, ha szeretem, könnyem fakad.</div>
+      <select data-answer="torma">
+        <option value="">— válassz —</option>
+        <option value="torma">torma</option>
+        <option value="hagyma">hagyma</option>
+        <option value="chili">chili</option>
+      </select>
+    </div>
+
+    <div class="fill-row">
+      <div style="flex:1"><strong>15.</strong> Vére van, de lelke nincs.</div>
+      <select data-answer="cékla">
+        <option value="">— válassz —</option>
+        <option value="cékla">cékla</option>
+        <option value="répa">répa</option>
+        <option value="paradicsom">paradicsom</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="controls">
+    <button id="riddleCheck">Ellenőrzés</button>
+    <button class="secondary" id="riddleReset">Újrakezd</button>
+  </div>
+  <div id="riddleResult" class="result small"></div>
+</section>
  
     <footer>© Tanulási segédlet — interaktív készítette: T.Soma - É.Barnabás</footer>
   </main>
