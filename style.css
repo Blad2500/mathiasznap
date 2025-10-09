@@ -11,6 +11,10 @@ body{
   margin:0;
   background: linear-gradient(180deg,#fff8ef 0%, #fff 60%);
   color:#222;
+  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   
 }
 
@@ -91,4 +95,13 @@ select.correct {
 select.wrong {
   background-color: #ffecec;
   border-color: #ffb3b3;
+}
+
+footer{
+  background-color: #ff6b6b;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
 }
