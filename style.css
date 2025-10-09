@@ -11,7 +11,7 @@ body{
   margin:0;
   background: linear-gradient(180deg,#fff8ef 0%, #fff 60%);
   color:#222;
-  background-image: url(szeperdo.jpg);
+  
 }
 
 header{
@@ -39,7 +39,7 @@ header h1{margin:0;font-size:1.2rem}
 .section-title{display:flex;align-items:center;justify-content:space-between}
 .small{font-size:0.9rem;color:var(--muted)}
 
-
+/* Fruits / drag & drop */
 .fruits-list{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
 .fruit{
   width:110px;height:110px;border-radius:12px;
@@ -51,7 +51,7 @@ header h1{margin:0;font-size:1.2rem}
 .fruit .emoji{font-size:36px}
 .fruit.hid{opacity:0.15}
 
-
+/* bins */
 .bins{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
 .bin{
   min-height:120px;border:3px dashed rgba(0,0,0,0.08);
@@ -62,12 +62,12 @@ header h1{margin:0;font-size:1.2rem}
 .bin.dragover{border-color:var(--accent);transform:scale(1.02)}
 .bin .inside{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
 
-
+/* placed item chip */
 .chip{padding:6px 8px;border-radius:8px;background:#f6f6f6;border:1px solid #eee;font-size:0.85rem}
 .chip.correct{background:#e6ffef;border-color:#8ef0b3}
 .chip.wrong{background:#ffecec;border-color:#ffb3b3}
 
-
+/* controls & form */
 .controls{display:flex;gap:8px;align-items:center;margin-top:10px}
 button{background:var(--accent);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
 button.secondary{background:#fff;border:1px solid #ddd;color:#333}
@@ -75,10 +75,20 @@ button.secondary{background:#fff;border:1px solid #ddd;color:#333}
 select,input[type=text]{padding:6px 8px;border-radius:8px;border:1px solid #ddd}
 .result{margin-top:8px}
 
-
+/* riddles */
 .riddle{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfbff);margin-bottom:10px}
 
 @media (max-width:900px){
   .bins{grid-template-columns:repeat(2,1fr)}
   .fruit{width:90px;height:90px}
+}
+
+select.correct {
+  background-color: #e6ffef;
+  border-color: #8ef0b3;
+}
+
+select.wrong {
+  background-color: #ffecec;
+  border-color: #ffb3b3;
 }
