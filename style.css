@@ -6,9 +6,16 @@
 }
 
 
+.card:first-of-type {
+  user-select: none;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  -khtml-user-select: none;  
+}
+
 #cimer{
   float: left;
-
 }
 
 *{box-sizing:border-box}
