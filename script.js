@@ -1,5 +1,4 @@
-
-const fruits = [
+ const fruits = [
   { name: 'alma', emoji: '🍎', group: 'almatermesuek' },
   { name: 'körte', emoji: '🍐', group: 'almatermesuek' },
   { name: 'naspolya', emoji: '🥭', group: 'almatermesuek' },
@@ -26,7 +25,6 @@ const fruits = [
   { name: 'josta', emoji: '🫐', group: 'bogyos' },
   { name: 'egres', emoji: '🫐', group: 'bogyos' }
 ];
-
 
 const fruitsContainer = document.getElementById('fruits');
 const bins = Array.from(document.querySelectorAll('.bin'));
@@ -71,7 +69,6 @@ bins.forEach(bin => {
     const id = e.dataTransfer.getData('text/plain');
     const dragged = document.getElementById(id);
     if (!dragged) return;
-    // ha már bent van ugyanaz a név, ne ismételjük (opcionális)
     const inside = bin.querySelector('.inside');
     const chip = document.createElement('div');
     chip.className = 'chip';
@@ -79,10 +76,8 @@ bins.forEach(bin => {
     chip.dataset.group = dragged.dataset.group;
     chip.dataset.name = dragged.dataset.name;
 
-    // lehetőség: chip törlése kattintással
     chip.title = 'Kattints ide a visszavonáshoz';
     chip.addEventListener('click', () => {
-      // visszahelyezzük a listába
       chip.remove();
       const el = document.createElement('div');
       el.className = 'fruit';
@@ -90,23 +85,21 @@ bins.forEach(bin => {
       el.dataset.name = chip.dataset.name;
       el.dataset.group = chip.dataset.group;
       el.innerHTML = `<div class="emoji">🔁</div><div class="label">${chip.dataset.name}</div>`;
-      // egyszerű visszaállítás: újra-render helyett adjuk hozzá újra
       el.addEventListener('dragstart', (e) => {
-        e.dataTransfer.setData('text/plain', 're-' + Date.now());
-        // ha újra akarjuk létrehozni a DOM elemet a drop-nál, hagyjuk egyszerűen:
+        e.dataTransfer.setData('text/plain', el.id);
+        setTimeout(() => el.classList.add('hid'), 0);
       });
-      // a legegyszerűbb: újrarendereljük az egész gyümölcslistát
-      renderFruits();
+      el.addEventListener('dragend', () => {
+        el.classList.remove('hid');
+      });
+      fruitsContainer.appendChild(el); // 🔁 csak ezt tesszük vissza
     });
 
-    // eltávolítjuk a forrás elemet (ha létezik a fruits listában)
-    const maybeOrig = dragged.parentElement;
-    if (maybeOrig) dragged.remove();
+    if (dragged.parentElement) dragged.remove();
     inside.appendChild(chip);
   });
 });
 
-/* Ellenőrzés */
 document.getElementById('checkBtn').addEventListener('click', () => {
   let correct = 0, total = 0;
   bins.forEach(bin => {
@@ -126,7 +119,6 @@ document.getElementById('checkBtn').addEventListener('click', () => {
   correctCountSpan.textContent = `${correct}/${total}`;
 });
 
-/* Reset */
 document.getElementById('resetBtn').addEventListener('click', () => {
   document.querySelectorAll('.chip').forEach(c => c.remove());
   renderFruits();
@@ -134,8 +126,10 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   correctCountSpan.textContent = '0';
 });
 
-/* Inicializálás */
 renderFruits();
+
+
+ 
 
 /* ===== Paradicsom kitöltős rész (select-ek) ===== */
 const fillOptions = {
